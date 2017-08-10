@@ -1,0 +1,22 @@
+<div class="container">
+<h1>Your Submission</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @poll.name %>
+</p>
+
+<p>
+  <strong>Laptop:</strong>
+  <%= @poll.laptop %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @poll.os %>
+</p>
+
+<%= link_to 'Edit', edit_poll_path(@poll) %> |
+<%= link_to 'View Results', polls_path %>
+</div>

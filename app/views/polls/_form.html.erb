@@ -1,0 +1,37 @@
+<%= form_with(model: poll, local: true) do |f| %>
+  <% if poll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poll.errors.count, "error") %> prohibited this poll from being saved:</h2>
+
+      <ul>
+      <% poll.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_area :name, id: :poll_name, class: "form-control" %>
+  </div>
+<br>
+  <div class="form-group">
+   <%= f.label :laptop, 'Do you own a laptop?' %><br />
+    <%= f.label :laptop, "Yes", :value => "true"  %>
+    <%= f.radio_button :laptop, true, :checked => true %>
+    <%= f.label :laptop, "No", :value => "false" %>
+    <%= f.radio_button :laptop, false %>
+  </div>
+<br>
+  <div class="form-group">
+    <%= f.label :laptop, 'What Operating System do you use?' %><br />
+
+     <%= f.select :os, options_for_select(["Mac OSX", "Windows 10", "Windows 7 or below", "Linux"]) %>
+
+  </div>
+<br>
+  <div class="actions">
+    <%= f.submit "Submit", class: "form-control" %>
+  </div>
+<% end %>

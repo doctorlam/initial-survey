@@ -1,0 +1,1229 @@
+Started GET "/" for 127.0.0.1 at 2017-08-10 14:34:29 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /ChrisLam.rvm/gems/ruby-2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /ChrisLam.rvm/gems/ruby-2.3.0/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 135ms (Views: 7.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:37:49 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.3) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.3) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePolls (20170810193624)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "polls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "laptop" blob, "os" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170810193624"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-08-10 19:39:35.028515"], ["updated_at", "2017-08-10 19:39:35.028515"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:39:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 353ms (Views: 348.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:39:41 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (14.3ms)
+  Rendered polls/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 49ms (Views: 37.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 14:40:01 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SCBtmy8vTex7lL9c/IKdKm4YiEEs+0VtEjE79/g1QUTFPkKzC0tXTijeyHT/ucRV3BlbHE20LdGjmVJZfnk+eQ==", "poll"=>{"name"=>"Test", "laptop"=>"Yes", "os"=>"Mac"}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Test"], ["laptop", "<3 bytes of binary data>"], ["os", "Mac"], ["created_at", "2017-08-10 19:40:01.842018"], ["updated_at", "2017-08-10 19:40:01.842018"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/1
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/polls/1" for 127.0.0.1 at 2017-08-10 14:40:01 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:40:09 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:41:30 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (185.3ms)
+  Rendered polls/new.html.erb within layouts/application (187.4ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fd42de0d388>:0x007fd43157afc8>):
+    17:   </div>
+    18: 
+    19:   <div class="field">
+    20:    <%= f.label :laptop %><br />
+    21:     <%= f.label :latpop, "Yes", :value => "true"  %>
+    22:     <%= f.radio_button :laptop, true %>
+    23:     <%= f.label :laptop, "No", :value => "false" %>
+  
+app/views/polls/_form.html.erb:20:in `block in _app_views_polls__form_html_erb__3094237667935373711_70274630916000'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3094237667935373711_70274630916000'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__3608697504258558947_70274668643380'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:42:08 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (10.5ms)
+  Rendered polls/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 14:42:17 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wUULq455B7Nxhsoq0r5fXUhplfjlSnitPHFv0TffkT8spZbvIRE5wbhGIh2VAJxtSDl0DzNJvnlLH0tCciMHFA==", "poll"=>{"name"=>"John Smith", "laptop"=>"false", "os"=>"Mac"}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "John Smith"], ["laptop", "<5 bytes of binary data>"], ["os", "Mac"], ["created_at", "2017-08-10 19:42:17.847371"], ["updated_at", "2017-08-10 19:42:17.847371"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/2
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/polls/2" for 127.0.0.1 at 2017-08-10 14:42:17 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:42:20 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:44:11 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.5ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:45:01 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.7ms)
+  Rendered polls/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:45:35 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:46:02 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.2ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:46:21 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.8ms)
+  Rendered polls/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:46:44 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (0.8ms)
+  Rendered polls/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ChrisLam/Desktop/tecm_4400_app/app/views/polls/_form.html.erb:37: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...r.append=( f.submit, "Submit" );@output_buffer.safe_append='
+...                               ^
+/Users/ChrisLam/Desktop/tecm_4400_app/app/views/polls/_form.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/ChrisLam/Desktop/tecm_4400_app/app/views/polls/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/ChrisLam/Desktop/tecm_4400_app/app/views/polls/_form.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/polls/_form.html.erb:37: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/polls/_form.html.erb:39: syntax error, unexpected keyword_end, expecting ')'
+app/views/polls/_form.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/polls/_form.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb__3608697504258558947_70274623268040'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:46:53 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.9ms)
+  Rendered polls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 14:46:55 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OoYJpZjP4rjCeIiUhXm6g3q+GmmKVtaD4GGVveLzvjDXZpThN6fcygu4YKPCx3mzeu77nlxVEFeXD7Eupw8oGw==", "poll"=>{"name"=>"", "laptop"=>"false"}, "commit"=>"Create Poll"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["laptop", "<5 bytes of binary data>"], ["created_at", "2017-08-10 19:46:55.968136"], ["updated_at", "2017-08-10 19:46:55.968136"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/3
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/polls/3" for 127.0.0.1 at 2017-08-10 14:46:55 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:46:57 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/polls/3" for 127.0.0.1 at 2017-08-10 14:47:01 -0500
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0xgrIflAnND2tLRKi3xAXjIY1o6gRGfFBTo5FgbGk/c++LZlViiioj90XH3MwoNuMkg3eXZHoRFyVB2FQzoF3A==", "id"=>"3"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:47:01 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/polls/2" for 127.0.0.1 at 2017-08-10 14:47:03 -0500
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Du76kbwoEc5/DpttWH0oPVF6DGNNCQ3W2n5zbc7BwlbjDmfVE0AvvLbOc1ofw+sNUSrtlJsKywKtEFf+iz1UfQ==", "id"=>"2"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:47:03 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/polls/1" for 127.0.0.1 at 2017-08-10 14:47:05 -0500
+Processing by PollsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"383wmn/3k9/Ar1V3R/D28XUbY4Q1t8E/pxEQOd+dR6QyLW3e0J+trQlvvUAATjXBdUuCc+O0B+vQfzSqmmHRjw==", "id"=>"1"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 14:47:05 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:47:08 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:48:58 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:48:59 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:49:00 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:49:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (14.6ms)
+  Rendered polls/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 283ms (Views: 263.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:49:36 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.2ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:50:15 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:50:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (15.9ms)
+  Rendered polls/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 229ms (Views: 212.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:50:28 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:51:10 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360277342380'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:51:22 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360302950840'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:51:52 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360241432160'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:51:53 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.8ms)
+  Rendered polls/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360302574140'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:51:59 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.0ms)
+  Rendered polls/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:52:15 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360278570260'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:53:22 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.4ms)
+  Rendered polls/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 3358ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360232869340'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:53:27 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360318728500'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:53:47 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.9ms)
+  Rendered polls/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 1346ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360327766480'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:54:21 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.0ms)
+  Rendered polls/new.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 1430ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360318317700'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:54:56 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360301257100'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:54:57 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360307939500'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:55:44 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/config
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/images
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/app/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/actionview-5.1.3/lib/assets/compiled
+  /ChrisLam.rvm/gems/ruby-2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/ChrisLam/Desktop/tecm_4400_app/node_modules
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/ChrisLam/.rvm/gems/ruby-2.3.0/gems/bootstrap-sass-3.3.7/assets/images):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___880890317424512375_70360308115660'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:55:52 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (15.7ms)
+  Rendered polls/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 1821ms (Views: 1804.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:56:40 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.9ms)
+  Rendered polls/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:57:15 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.0ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:57:30 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (0.7ms)
+  Rendered polls/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ChrisLam/Desktop/tecm_4400_app/app/views/polls/_form.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: "form-control" );@output_buf...
+...                               ^):
+  
+app/views/polls/_form.html.erb:37: syntax error, unexpected tLABEL, expecting '='
+app/views/polls/new.html.erb:3:in `_app_views_polls_new_html_erb___1457404156304211645_70256032779660'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:58:07 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.9ms)
+  Rendered polls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:58:27 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:59:19 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (4.0ms)
+  Rendered polls/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 1449ms (Views: 1447.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:59:40 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.0ms)
+  Rendered polls/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 14:59:54 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:00:19 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:00:26 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:00:28 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.5ms)
+  Rendered polls/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 15:00:31 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+QrvBy1dzd4lFxTnpw7nYR8olKYqEoJBzlMbuCftL090FMAvCTnXfHZdY8+kNb4erSlH+0td6v1/+3IWoaFQcg==", "poll"=>{"name"=>"", "laptop"=>"false"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", ""], ["laptop", "<5 bytes of binary data>"], ["created_at", "2017-08-10 20:00:31.740163"], ["updated_at", "2017-08-10 20:00:31.740163"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/4
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:00:31 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:00:58 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:01:18 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:01:32 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:01:37 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:01:43 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.9ms)
+  Rendered polls/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:02:02 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.2ms)
+  Rendered polls/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/polls/4" for 127.0.0.1 at 2017-08-10 15:02:04 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cN75PEbieebZBuXBVbn0E6fu/WD0DD2cjYZSxcOKRb2dPmR46YpHlBDGDfYSBzcjp74clyIP+0j66HZWhnbTlg==", "poll"=>{"name"=>"", "laptop"=>"false", "os"=>"true"}, "commit"=>"Submit", "id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "polls" SET "os" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["os", "true"], ["updated_at", "2017-08-10 20:02:04.937299"], ["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/4
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:02:04 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:02:09 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:03:01 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:03:02 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (179.7ms)
+  Rendered polls/edit.html.erb within layouts/application (181.3ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mac' for #<#<Class:0x007fcb801ea070>:0x007fcb83d61f18>):
+    27:   <div class="form-group">
+    28:     <%= f.label :os, 'Operating System' %><br />
+    29:     <%= f.label :os, "Mac", :value => "Mac"  %>
+    30:     <%= f.radio_button :os, mac %>
+    31: 
+    32:     <%= f.label :os, "Windows", :value => "Windows" %>
+    33:     <%= f.radio_button :os, windows %>
+  
+app/views/polls/_form.html.erb:30:in `block in _app_views_polls__form_html_erb__3378065956615036753_70256033565180'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3378065956615036753_70256033565180'
+app/views/polls/edit.html.erb:4:in `_app_views_polls_edit_html_erb__3673584462349749113_70256033469560'
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:04:04 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.9ms)
+  Rendered polls/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:06:10 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (139.2ms)
+  Rendered polls/edit.html.erb within layouts/application (140.7ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x007fcb85618660>):
+    25:   </div>
+    26: 
+    27:   <div class="form-group">
+    28:     <%= f.input :os %>
+    29:      <%= f.select :os, options_for_select(["Mac", "Windows", "Linux"]) %>
+    30: 
+    31:   </div>
+  
+app/views/polls/_form.html.erb:28:in `block in _app_views_polls__form_html_erb__3378065956615036753_70256046463660'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3378065956615036753_70256046463660'
+app/views/polls/edit.html.erb:4:in `_app_views_polls_edit_html_erb__3673584462349749113_70256031802760'
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:06:27 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.0ms)
+  Rendered polls/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/polls/4" for 127.0.0.1 at 2017-08-10 15:06:39 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dSyA8nvTtIbBP28FU9DMXXEf9wFSBiB6HVvgpM/soviYzB221LuK9Aj/hzIUbg9tcU8W9oQF5q5qNcQ3ihA00w==", "poll"=>{"name"=>"Test Linux", "laptop"=>"true", "os"=>"Linux"}, "commit"=>"Submit", "id"=>"4"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "polls" SET "name" = ?, "laptop" = ?, "os" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["name", "Test Linux"], ["laptop", "<4 bytes of binary data>"], ["os", "Linux"], ["updated_at", "2017-08-10 20:06:39.126605"], ["id", 4]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/4
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:06:39 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:06:42 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.3ms)
+  Rendered polls/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/polls/4" for 127.0.0.1 at 2017-08-10 15:06:44 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+awFDRbCxo7EtQpweGAV7U9OzfX+y608ng7pA31lcc5wEQRzk9A6R74ciw4ILGj5RLg0L4t0k5JcASZoLjAKPA==", "poll"=>{"name"=>"Test Linux", "laptop"=>"false", "os"=>"Windows"}, "commit"=>"Submit", "id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "polls" SET "laptop" = ?, "os" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["laptop", "<5 bytes of binary data>"], ["os", "Windows"], ["updated_at", "2017-08-10 20:06:44.303707"], ["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/4
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/polls/4" for 127.0.0.1 at 2017-08-10 15:06:44 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:06:46 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:07:55 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/4/edit" for 127.0.0.1 at 2017-08-10 15:07:57 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:08:03 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.8ms)
+  Rendered polls/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:08:53 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:10:07 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (3.1ms)
+  Rendered polls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:10:09 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:10:10 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:10:37 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:10:44 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:11:14 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
