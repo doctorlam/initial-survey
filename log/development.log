@@ -1293,3 +1293,358 @@ Processing by PollsController#new as HTML
 Completed 200 OK in 67ms (Views: 56.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-10 15:43:55 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.9ms)
+  Rendered polls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 15:44:01 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ptVl4XdGV8n/MLDrMzyiKYPleH+xB0F2CA2zcfTA+wTe8jTKrUnLe48KvTrcjG4pl90FijH29GvThJegi+Vxw==", "poll"=>{"name"=>"Test", "laptop"=>"false", "os"=>"Mac OSX"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Test"], ["laptop", "<5 bytes of binary data>"], ["os", "Mac OSX"], ["created_at", "2017-08-10 20:44:01.327563"], ["updated_at", "2017-08-10 20:44:01.327563"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/5
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/polls/5" for 127.0.0.1 at 2017-08-10 15:44:01 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/5/edit" for 127.0.0.1 at 2017-08-10 15:44:05 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.0ms)
+  Rendered polls/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:44:06 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.3ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:44:07 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.3ms)
+  Rendered polls/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 15:44:14 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zflx38g8FA13DTPY+t5+W8X7SCGiAHcH2kGysWC7ihbo51737FgOryRHRPD55Sckd/qbfMNPH7tr6dsf5vf1Kw==", "poll"=>{"name"=>"adsfadf", "laptop"=>"false", "os"=>"Windows 7 or below"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "adsfadf"], ["laptop", "<5 bytes of binary data>"], ["os", "Windows 7 or below"], ["created_at", "2017-08-10 20:44:14.450159"], ["updated_at", "2017-08-10 20:44:14.450159"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/6
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/polls/6" for 127.0.0.1 at 2017-08-10 15:44:14 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:44:16 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:44:58 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.2ms)
+  Rendered polls/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/ChrisLam/Desktop/initial-survey/app/views/polls/_form.html.erb:22: syntax error, unexpected ':', expecting ')'
+...aptop, true, :value => "Yes!" :checked => true );@output_buf...
+...                               ^):
+  
+app/views/polls/_form.html.erb:22: syntax error, unexpected ':', expecting ')'
+app/views/polls/new.html.erb:5:in `_app_views_polls_new_html_erb___19718315408210265_70301604799440'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:47:01 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.6ms)
+  Rendered polls/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 4, expected 2..3)):
+    19:   <div class="form-group">
+    20:    <%= f.label :laptop, 'Do you own a laptop?' %><br />
+    21:     <%= f.label :laptop, "Yes", :value => "true"  %>
+    22:     <%= f.radio_button :laptop, "Yes!", true, :checked => true %>
+    23:     <%= f.label :laptop, "No", :value => "false" %>
+    24:     <%= f.radio_button :laptop, false %>
+    25:   </div>
+  
+app/views/polls/_form.html.erb:22:in `block in _app_views_polls__form_html_erb__3338930655143534206_70301597992600'
+app/views/polls/_form.html.erb:1:in `_app_views_polls__form_html_erb__3338930655143534206_70301597992600'
+app/views/polls/new.html.erb:5:in `_app_views_polls_new_html_erb___19718315408210265_70301598028040'
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:47:12 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (1.8ms)
+  Rendered polls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 15:47:14 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Avvc0MhnylVXpE7z3s282TbF/MlTznpP6Cav7vt0UAV63I37EmhW5yeeQyIxfXDZIv2BPNM/z1Izr4s/hFHaw==", "poll"=>{"name"=>"", "laptop"=>"Yes!", "os"=>"Mac OSX"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["laptop", "<4 bytes of binary data>"], ["os", "Mac OSX"], ["created_at", "2017-08-10 20:47:14.657218"], ["updated_at", "2017-08-10 20:47:14.657218"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/7
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:47:14 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7/edit" for 127.0.0.1 at 2017-08-10 15:47:47 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/polls/7" for 127.0.0.1 at 2017-08-10 15:47:48 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mrS+Wl4klbzMlVGCcFqGlcKDUJEvcBICUav0viWEyPC07kI8GVLB62P4TYS+CnIx56NXEuwjTlVO6k2FLLqQ6A==", "poll"=>{"name"=>"", "laptop"=>"U+1F44D", "os"=>"Mac OSX"}, "commit"=>"Submit", "id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "polls" SET "laptop" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["laptop", "<7 bytes of binary data>"], ["updated_at", "2017-08-10 20:47:48.170723"], ["id", 7]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/7
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:47:48 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:11 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:12 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:13 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7/edit" for 127.0.0.1 at 2017-08-10 15:48:15 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:16 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pz4UQqDfKI9Oxmo+sngNYxTLtnIOm0t3u3aIEvT8+54RZOgk56l82OGrdjh8KPnHMeux8c3IFyCkNzEp/cKjhg==", "poll"=>{"name"=>"", "laptop"=>"&#128077;", "os"=>"Mac OSX"}, "commit"=>"Submit", "id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "polls" SET "laptop" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["laptop", "<9 bytes of binary data>"], ["updated_at", "2017-08-10 20:48:16.370405"], ["id", 7]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/7
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:16 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:42 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:48:43 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:49:06 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/7" for 127.0.0.1 at 2017-08-10 15:49:07 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:49:08 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:49:10 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:49:11 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/polls/new" for 127.0.0.1 at 2017-08-10 15:49:11 -0500
+Processing by PollsController#new as HTML
+  Rendering polls/new.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.1ms)
+  Rendered polls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/polls" for 127.0.0.1 at 2017-08-10 15:49:12 -0500
+Processing by PollsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ogxIUICdbbBwkyYwDMwiEwHO48LzZ/qcvoDNvS/aZUEvEmd4pPl3EiPZURgP93tss88wn5IokiAPKKQTqZYafA==", "poll"=>{"name"=>"", "laptop"=>"Yes!", "os"=>"Mac OSX"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "polls" ("name", "laptop", "os", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", ""], ["laptop", "<4 bytes of binary data>"], ["os", "Mac OSX"], ["created_at", "2017-08-10 20:49:12.793312"], ["updated_at", "2017-08-10 20:49:12.793312"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/8
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/polls/8" for 127.0.0.1 at 2017-08-10 15:49:12 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls/8/edit" for 127.0.0.1 at 2017-08-10 15:49:14 -0500
+Processing by PollsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering polls/edit.html.erb within layouts/application
+  Rendered polls/_form.html.erb (2.4ms)
+  Rendered polls/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/polls/8" for 127.0.0.1 at 2017-08-10 15:49:16 -0500
+Processing by PollsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jj4SKlzxF+nSX9xFlTiAZg3Bz+0o212L+DbGfho8dhdsGLTvYxQy8nQ9BeWKMYz1NksoVaYpYB1C/CnSW1WY4g==", "poll"=>{"name"=>"", "laptop"=>"No :(", "os"=>"Mac OSX"}, "commit"=>"Submit", "id"=>"8"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "polls" SET "laptop" = ?, "updated_at" = ? WHERE "polls"."id" = ?[0m  [["laptop", "<5 bytes of binary data>"], ["updated_at", "2017-08-10 20:49:16.810555"], ["id", 8]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/polls/8
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/polls/8" for 127.0.0.1 at 2017-08-10 15:49:16 -0500
+Processing by PollsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT  "polls".* FROM "polls" WHERE "polls"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering polls/show.html.erb within layouts/application
+  Rendered polls/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/polls" for 127.0.0.1 at 2017-08-10 15:49:18 -0500
+Processing by PollsController#index as HTML
+  Rendering polls/index.html.erb within layouts/application
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  Rendered polls/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
